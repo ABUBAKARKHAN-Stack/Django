@@ -1,4 +1,4 @@
-{% load static %}
+{% load static tailwind_tags %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,11 +10,13 @@
         Chai
       {% endblock %}
     </title>
-    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    {% tailwind_css %}
   </head>
-  <body>
-    <nav>This is our navbar</nav>
-    {% block content %}{% endblock content %}
-    <footer>This is our footer</footer>
+  <body class="bg-[#18181b] text-white">
+    <nav class="h-20 bg-neutral-900 shadow-2xs border-b-2 border-black/20">This is our navbar</nav>
+    <div class="max-w-6xl px-6 py-3 mx-auto w-full">
+      {% block content %}
+      {% endblock %}
+    </div>
   </body>
 </html>
