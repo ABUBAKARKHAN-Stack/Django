@@ -1,0 +1,21 @@
+{% load static tailwind_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Tweet |{% block title %}
+      {% endblock %}
+    </title>
+    {% tailwind_css %}
+  </head>
+  <body class="bg-base-300 size-full">
+    <div class="min-h-screen size-full container mx-auto px-8">
+      {% block content %}
+
+      {% endblock %}
+    </div>
+  </body>
+</html>
